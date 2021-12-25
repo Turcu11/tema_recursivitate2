@@ -8,12 +8,17 @@ namespace tema_recursivitate2
         {
             Console.WriteLine("Please enter the size of the array: ");
             int n = Convert.ToInt32(Console.ReadLine());
-            int[] array = new int[n];
-            if(n == 0)
+            if (n == 0)
             {
                 Console.WriteLine("Array is empty !!");
                 return;
             }
+            if (n < 0)
+            {
+                Console.WriteLine("Negative value not allowed !!");
+                return;
+            }
+            int[] array = new int[n];
 
             Console.WriteLine("Please fill in the array.");
             for (int i = 0; i < n; i++)
